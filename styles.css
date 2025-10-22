@@ -1,0 +1,94 @@
+/* WebSocket Lab – styles.css */
+
+:root {
+  --bg: #f9fafb;
+  --text: #1f2937;
+  --primary: #0ea5e9;
+  --primary-hover: #0284c7;
+  --ok: #16a34a;
+  --warn: #f59e0b;
+  --bad: #dc2626;
+  --panel: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+#status {
+  font-weight: 700;
+  margin: 16px 0 12px;
+}
+
+.connected {
+  color: var(--ok);
+}
+.connecting {
+  color: var(--warn);
+}
+.disconnected {
+  color: var(--bad);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 160px 1fr 100px 160px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+#output {
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 240px;
+  max-height: 420px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
